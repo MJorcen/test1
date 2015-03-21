@@ -1,0 +1,200 @@
+运营服务器
+地址:115.29.36.149
+账号: administrator
+密码: jorcen
+
+----------------
+MySQL
+账号:root
+密码:123123
+————
+svn 
+地址:
+svn://115.29.36.149:8895/
+安装地址:
+D:\svn
+账号;密码:
+wangtao;wangtao
+terry;terry
+bh;baohong
+jorcne;c
+
+
+桌面:
+
+9192- sai_console-startup.bat 启动管理后台
+
+9091_microMsg_clusters_startup.bat 启动微信后端与渠道后端服务
+9092_saiZD_clusters_startup.bat 启动 APP 后台
+9093_saiZD_clusters_startup.bat (废弃不用,如果需要打开, 请先查看 Apache server mk组件的配置  (D:\Apache2.2\conf ))
+
+svnStart.cmd 启动 svn  , (配置路径D:\svn )
+jorcen=c
+c=
+wangtao=wangtao
+terry=terry
+bh=baohong
+
+
+
+
+--------------
+部署跟路径
+E:\Clusters
+
+
+项目部署路径, 所有项目代码都在这个目录下:
+E:\Clusters\source
+
+静态文件根目录(Apache server 服务器)
+E:\Clusters\static
+
+一些相关文档和资料
+E:\Clusters\src&doc
+
+MySQL 数据库的日志文件
+E:\Clusters\db
+
+运营服务器后台管理程序使用的 tomcat
+E:\Clusters\apache-tomcat-7.0.47-sai_console-9192
+对应的代码路径是
+E:\Clusters\source\sai_console-9192
+访问路径
+http://io.shaizd.com:9192/sai_admin
+账号: admin
+密码: lzz158168
+
+
+运营服务器微信公众号与渠道管理程序使用的 tomcat
+E:\Clusters\apache-tomcat-7.0.47-1
+对应的代码路径是
+E:\Clusters\source\channel
+
+
+app后端,
+E:\Clusters\apache-tomcat-7.0.47-2
+对应的代码路径是
+E:\Clusters\source\sai_zd_9092
+http://io.shaizd.com[9092]/sai_zd
+
+废弃不用
+E:\Clusters\apache-tomcat-7.0.47-3
+
+
+
+
+测试服务器
+
+测试服务器001
+地址: 115.29.201.6
+账号: root
+密码: mjorcen
+—————
+ftp:
+ 账号:  www 
+ 密码:  ibWJtsEDU
+————— 
+mysql
+账号:root
+密码:  (空)
+————— 
+服务程序路径
+/alidata/server/
+
+代码路径:
+/alidata/www/
+
+静态文件路径
+/alidata/www/static
+
+简单的监控
+/alidata/www/heartbeat
+
+
+测试服务器002
+地址: 115.29.227.37
+账号: root
+密码: Zhou6170492
+
+—————
+ftp:
+ 账号:  binli 
+ 密码:  wwwwww
+———— — 
+
+mysql
+jdbc_username=root
+
+jdbc_password=
+
+————— 
+
+
+服务程序路径
+/alidata/server/
+
+
+
+app 后端服务 tomcat
+
+/alidata/server/tomcat/apache-tomcat-7.0.53-cluster-1 
+
+app 后端管理 tomcat
+/alidata/server/tomcat/apache-tomcat-7.0.53-backend
+
+代码路径:
+
+/alidata/www/
+
+静态文件路径
+
+/alidata/www/static
+
+
+
+项目: msshj ,app 后端 , status2 spring hibernate 架构
+
+目录结构:
+
+src/main/java 类文件
+src/main/resources 配置文件
+src/main/resources/dropins 配置文件
+				umeng.properties 友盟插件配置文件
+				upload.properties 文件上传的保存路径
+-----------------------------------------------------------------------------
+clusters=根文件路径(   如 [E:/Clusters/static/sai_zd/])
+temp=临时文件路径(注意定时清理(文件全路径) : 如[E:/Clusters/static/sai_zd/temp/] ) 
+wtLog=(客户端错误日志上传(基于clusters 的相对路径 : 如[user/err/ 实际地址为 E:/Clusters/static/sai_zd/user/err/]) :
+WT_fileUpload=(客户端错误日志上传(基于clusters 的相对路径 : 如[user/err/ 实际地址为 E:/Clusters/static/sai_zd/user/err/]) :
+userLog=(客户端错误日志上传(基于clusters 的相对路径 : 如[user/err/ 实际地址为 E:/Clusters/static/sai_zd/user/err/]) :
+userHearder=(用户头像(基于clusters 的相对路径 : 如[user/err/ 实际地址为 E:/Clusters/static/sai_zd/user/err/]) :
+comPic[重点需要优化]=(账单图片(基于clusters 的相对路径 : 如[user/err/ 实际地址为 E:/Clusters/static/sai_zd/user/err/]) :
+logs=upload/logs/(用户头像(基于clusters 的相对路径 : 如[user/err/ 实际地址为 E:/Clusters/static/sai_zd/user/err/]) :
+userPic=(用户头像(基于clusters 的相对路径 : 如[user/err/ 实际地址为 E:/Clusters/static/sai_zd/user/err/]) :
+begPic=(乞讨令头像(基于clusters 的相对路径 : 如[user/err/ 实际地址为 E:/Clusters/static/sai_zd/user/err/]) :
+uploadFilePath=(普通文件上传(基于clusters 的相对路径 : 如[user/err/ 实际地址为 E:/Clusters/static/sai_zd/user/err/]) :
+thumbnails=(废弃不用)
+-----------------------------------------------------------------------------
+
+src/main/resources/properties 属性文件
+				version.properties 版本号,更新提示信息
+# ---------------- app版本属性配置文件， 编码方式用UTF-8 
+AndroidVersion=6
+IOSVersion=1.0
+AndroidMsg=Android更新信息 分行标识####
+IOSMsg=ios更新信息
+AndroidUrl=安卓apk下载地址
+IOSUrl=IOS地址
+
+				cluster-msg.properties 内部版本号,更新地址
+
+IOS=ios内部版本号
+ANDROID=ANDROID内部版本号
+StaticUrlPrefix=静态文件路径前缀
+ProcessingService=动态地址路径前缀
+appUrl=安卓apk下载地址
+
+
+
+
+
